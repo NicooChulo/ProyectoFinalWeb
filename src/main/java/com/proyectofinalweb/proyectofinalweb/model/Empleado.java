@@ -39,4 +39,5 @@ public class Empleado {
     @NotNull(message = "El dni no puede ser Nulo")
     @Size(min = 7, message = "El dni debe tener al menos ocho caracteres")
     private String dni;
+
 }
