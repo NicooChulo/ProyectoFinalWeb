@@ -79,6 +79,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     public EmpleadoDTO buscarEmpleadoPorDNI(String dni) {
         Empleado empleado = empleadoRepository.findByDni(dni);
         if(empleado == null) {
+          //  throw new  noSuchElementException("noexiste id: " + dni);
             return  null;
         }
         return modelMapper.map(empleado, EmpleadoDTO.class);
