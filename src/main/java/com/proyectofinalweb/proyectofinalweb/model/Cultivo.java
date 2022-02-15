@@ -6,8 +6,6 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.math.BigDecimal;
-import java.util.List;
 
 @Getter
 @Setter
@@ -17,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @ApiModel(description = "Información de los Empleados")
-public class Empleado {
+public class Cultivo {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,13 +28,4 @@ public class Empleado {
     @Size(min = 2, message = "El nombre debe tener al menos dos caracteres")
     private String nombre;
 
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "El apellido no puede ser Nulo")
-    @Size(min = 2, message = "El apellido debe tener al menos dos caracteres")
-    private String apellido;
-
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "El dni no puede ser Nulo")
-    @Size(min = 7, message = "El dni debe tener al menos ocho caracteres")
-    private String dni;
 }

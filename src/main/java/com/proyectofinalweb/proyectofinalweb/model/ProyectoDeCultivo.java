@@ -6,8 +6,6 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.math.BigDecimal;
-import java.util.List;
 
 @Getter
 @Setter
@@ -17,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @ApiModel(description = "Información de los Empleados")
-public class Empleado {
+public class ProyectoDeCultivo {
 
     private static final long serialVersionUID = 1L;
 
