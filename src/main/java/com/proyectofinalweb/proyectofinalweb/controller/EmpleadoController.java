@@ -30,7 +30,7 @@ public class EmpleadoController {
 
     @RequestMapping(value = DNI, method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<EmpleadoDTO> getOneEmpleado(@PathVariable("empleado_dni") String empleadoDNI) {
-        logger.info("Buscar un empleado por id {}", empleadoDNI);
+        logger.info("Buscar un empleado por dni {}", empleadoDNI);
         EmpleadoDTO empleado = this.empleadoService.buscarEmpleadoPorDNI(empleadoDNI);
         if (empleado == null) {
             return new ResponseEntity<EmpleadoDTO>(HttpStatus.NOT_FOUND);
@@ -39,8 +39,8 @@ public class EmpleadoController {
     }
 
     @RequestMapping(method = RequestMethod.GET,produces = "application/json")
-    public ResponseEntity<Collection<EmpleadoDTO>> getAllEmpleados(){
-        logger.info("Get Todos los Empleados");
+    public ResponseEntity<Collection<EmpleadoDTO>> getEmpleados(){
+        logger.info("Get All Hotels");
         Collection<EmpleadoDTO> empleados = new ArrayList<EmpleadoDTO>();
         empleados.addAll(this.empleadoService.listarTodos());
         if (empleados.isEmpty()){

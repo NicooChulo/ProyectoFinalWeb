@@ -44,4 +44,7 @@ public class Lote {
     private List<ProyectoDeCultivo> proyectoDeCultivos;
 
 
+
+
+
 }

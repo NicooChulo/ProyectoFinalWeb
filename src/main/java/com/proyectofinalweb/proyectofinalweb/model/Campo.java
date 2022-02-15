@@ -1,8 +1,7 @@
 package com.proyectofinalweb.proyectofinalweb.model;
 
-import io.swagger.annotations.ApiModel;
+import  io.swagger.annotations.ApiModel;
 import lombok.*;
-import org.springframework.web.servlet.tags.MessageTag;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@ApiModel(description = "Información de los Campos")
+@ApiModel(description = "Información de los campos")
 public class Campo {
 
     private static final long serialVersionUID = 1L;
@@ -36,6 +35,7 @@ public class Campo {
     @OneToMany(mappedBy = "campo", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
             CascadeType.REMOVE }, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Lote> lotes;
+
 
 
 }
