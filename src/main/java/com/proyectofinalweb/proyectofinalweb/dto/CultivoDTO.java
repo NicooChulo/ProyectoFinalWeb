@@ -23,5 +23,8 @@ public class CultivoDTO {
     @Size(min = 2, message = "El nombre debe tener al menos dos caracteres")
     private String nombre;
 
+    @JsonIgnore
+    private List<OrdenDeLaboreoDTO> ordenDeLaboreoDTOS;
+
 
 }

@@ -6,11 +6,12 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "empleados")
+@Table(name = "cultivos")
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -27,5 +28,9 @@ public class Cultivo {
     @NotNull(message = "El nombre no puede ser Nulo")
     @Size(min = 2, message = "El nombre debe tener al menos dos caracteres")
     private String nombre;
+
+    @OneToMany
+    private List<OrdenDeLaboreo> ordenDeLaboreo;
+
 
 }
