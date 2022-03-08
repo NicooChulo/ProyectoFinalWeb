@@ -25,11 +25,6 @@ public class RegistroDeLaboreoDTO {
     @JoinColumn(name = "id_proyecto_de_cultivo_fk")
     private ProyectoDeCultivo proyectoDeCultivo;
 
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "El numeroCampo no puede ser Nulo")
-    @Size(min = 2, message = "El numeroCampo debe tener al menos dos caracteres")
-    private String numeroCampo;
-
     @Column(columnDefinition = "DATE")
     private LocalDate inicioRegistro;
 

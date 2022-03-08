@@ -39,8 +39,17 @@ INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES 
 INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES ('8','2','5');
 
 
-INSERT INTO cultivos_ordene_de_laboreo (`cultivo_id`,`orden_laboreo_id`) VALUES ('1','1');
-INSERT INTO cultivos_ordene_de_laboreo (`cultivo_id`,`orden_laboreo_id`) VALUES ('2','2');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('1','1');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('1','2');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('1','3');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('1','4');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('1','5');
+
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('2','6');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('2','7');
+INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('2','8');
+
+
 
 
 
