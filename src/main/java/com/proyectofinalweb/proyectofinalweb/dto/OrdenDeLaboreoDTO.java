@@ -1,16 +1,14 @@
 package com.proyectofinalweb.proyectofinalweb.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.proyectofinalweb.proyectofinalweb.model.EstadoDeCampo;
 import com.proyectofinalweb.proyectofinalweb.model.Laboreo;
-import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
+
 
 @Validated
 @Data

@@ -2,8 +2,6 @@ package com.proyectofinalweb.proyectofinalweb.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.proyectofinalweb.proyectofinalweb.model.Cultivo;
-import com.proyectofinalweb.proyectofinalweb.model.EstadoDeCampo;
-import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
