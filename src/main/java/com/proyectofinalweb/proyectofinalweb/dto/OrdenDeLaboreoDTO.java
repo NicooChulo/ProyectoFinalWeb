@@ -22,7 +22,7 @@ public class OrdenDeLaboreoDTO {
     @Column(nullable = false, length = 50)
     @NotNull(message = "El numero no puede ser Nulo")
     @Size(min = 2, message = "El numero debe tener al menos dos caracteres")
-    private String numero;
+    private String numeroOrdenLaboreo;
 
     @ManyToOne
     private Laboreo laboreo;

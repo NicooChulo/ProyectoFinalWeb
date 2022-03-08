@@ -34,13 +34,13 @@ INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES 
 INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES ('5','1','5');
 
 --- orden de laboreo para proyecto de cultivo de papa ---
-
 INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES ('6','2','2');
 INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES ('7','2','3');
 INSERT INTO ordenes_laboreos (`id`,`numero_orden_laboreo`, `laboreo_id`) VALUES ('8','2','5');
 
-INSERT INTO cultivos_ordenes_laboreos (`cultivo_id`,`orden_laboreo_id`) VALUES ('1','1');
-INSERT INTO cultivos_ordenes_laboreos (`cultivo_id`,`orden_laboreo_id`) VALUES ('2','2');
+
+INSERT INTO cultivos_ordene_de_laboreo (`cultivo_id`,`orden_laboreo_id`) VALUES ('1','1');
+INSERT INTO cultivos_ordene_de_laboreo (`cultivo_id`,`orden_laboreo_id`) VALUES ('2','2');
 
 
 

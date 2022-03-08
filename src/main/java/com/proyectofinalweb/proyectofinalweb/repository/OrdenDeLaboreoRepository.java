@@ -8,4 +8,5 @@ public interface OrdenDeLaboreoRepository extends JpaRepository<OrdenDeLaboreo, 
 
     OrdenDeLaboreo findById(int id);
 
+
 }
