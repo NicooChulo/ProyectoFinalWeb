@@ -17,10 +17,18 @@ public class ProyectoDeCultivoDTO {
 
     private String numeroProyecto;
 
+<<<<<<< Updated upstream
     private CultivoDTO cultivo;
 
     private EstadoDelProyectoDTO estadoDeProyecto;
 
+=======
+
+    private CultivoDTO cultivo;
+
+    private EstadoDelProyectoDTO estadoDeProyecto;
+
+>>>>>>> Stashed changes
     @JsonIgnore
     private List<RegistroDeLaboreoDTO> registroDeLaboreos;
 

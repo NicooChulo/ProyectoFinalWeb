@@ -1,13 +1,11 @@
 package com.proyectofinalweb.proyectofinalweb.service.crud;
 
 
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.CultivoDTO;
 
-public interface ICultivoService extends ICRUD<EmpleadoDTO>{
 
-    EmpleadoDTO buscarEmpleadoPorDNI(String dni);
+public interface ICultivoService extends ICRUD<CultivoDTO>{
 
-    EmpleadoDTO findById(int empleado_id);
+    CultivoDTO findById(int cultivo_id);
 
-    EmpleadoDTO modificarEmpleado(EmpleadoDTO empleadoDTO);
 }

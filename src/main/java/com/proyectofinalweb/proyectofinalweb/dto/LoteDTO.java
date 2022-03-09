@@ -2,6 +2,7 @@ package com.proyectofinalweb.proyectofinalweb.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.proyectofinalweb.proyectofinalweb.model.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
@@ -19,7 +20,11 @@ public class LoteDTO {
 
     private CampoDTO campo;
 
+<<<<<<< Updated upstream
     private String numeroCampo;
+=======
+    private String numeroLote;
+>>>>>>> Stashed changes
 
     private float superficie;
 

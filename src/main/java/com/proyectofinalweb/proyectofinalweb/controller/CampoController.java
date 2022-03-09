@@ -18,11 +18,18 @@ import java.util.Collection;
 @RestController
 @RequestMapping(CampoController.RESOURCE)
 public class CampoController {
+<<<<<<< Updated upstream
 
     private static final Logger logger = LoggerFactory.getLogger(CampoController.class);
     public static final String RESOURCE = "/api/v1/empleados";
 
     public static final String DNI = "/{empleado_dni}";
+=======
+    private static final Logger logger = LoggerFactory.getLogger(CampoController.class);
+    public static final String RESOURCE = "/api/v1/campos";
+
+    public static final String DNI = "/{campo_id}";
+>>>>>>> Stashed changes
     public static final String SEARCH = "/search";
 
     private ICampoService campoService;
@@ -31,6 +38,7 @@ public class CampoController {
         this.campoService = campoService;
     }
 
+<<<<<<< Updated upstream
     @RequestMapping(value = DNI, method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<CampoDTO> getOneCampo(@PathVariable("numero_campo") String numeroCampo) {
         logger.info("Buscar un empleado por dni {}", numeroCampo);
@@ -42,6 +50,19 @@ public class CampoController {
     }
 
   /*  @RequestMapping(method = RequestMethod.GET,produces = "application/json")
+=======
+   /* @RequestMapping(value = DNI, method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<CampoDTO> getOneCampo(@PathVariable("campo_id") String campoID) {
+        logger.info("Buscar un campo por id {}", campoID);
+        EmpleadoDTO empleado = this.campoService.buscarEmpleadoPorDNI(campoID);
+        if (empleado == null) {
+            return new ResponseEntity<EmpleadoDTO>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<EmpleadoDTO>(empleado, HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.GET,produces = "application/json")
+>>>>>>> Stashed changes
     public ResponseEntity<Collection<EmpleadoDTO>> getEmpleados(){
         logger.info("Get All Hotels");
         Collection<EmpleadoDTO> empleados = new ArrayList<EmpleadoDTO>();
@@ -51,8 +72,13 @@ public class CampoController {
         }else{
             return new ResponseEntity<Collection<EmpleadoDTO>>(empleados, HttpStatus.OK);
         }
+<<<<<<< Updated upstream
     }
 */
+=======
+    }*/
+
+>>>>>>> Stashed changes
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json")
     @ResponseBody
@@ -60,6 +86,7 @@ public class CampoController {
         CampoDTO campoRespuesta = null;
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
+<<<<<<< Updated upstream
         headers.add("Responded", "EmpleadoController");
 
         try {
@@ -69,6 +96,20 @@ public class CampoController {
 
         } catch(Exception ex) {
             System.out.println("Employee not found" + ex.getMessage());
+=======
+        headers.add("Responded", "CampoController");
+
+
+        try {
+            if (campoService.buscarCampoPorNumero(nuevoCampo.getNumeroCampo())==null){
+
+                campoRespuesta = campoService.registrar(nuevoCampo);
+
+            }
+
+        } catch(Exception ex) {
+            logger.info("El campo ya existe {}", nuevoCampo.getNumeroCampo());
+>>>>>>> Stashed changes
             return ResponseEntity.ok().headers(headers).body(campoRespuesta);
         }
 
