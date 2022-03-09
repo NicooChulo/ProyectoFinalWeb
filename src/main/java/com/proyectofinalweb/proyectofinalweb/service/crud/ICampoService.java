@@ -5,6 +5,6 @@ import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
 
 public interface ICampoService extends ICRUD<CampoDTO>{
 
-    CampoDTO bucarCampoPorNumero(String numeroCampo);
+    CampoDTO buscarCampoPorNumero(String numeroCampo);
 
 }
