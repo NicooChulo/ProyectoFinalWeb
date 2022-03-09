@@ -1,13 +1,8 @@
 package com.proyectofinalweb.proyectofinalweb.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.proyectofinalweb.proyectofinalweb.model.Cultivo;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 @Validated
@@ -17,12 +12,9 @@ public class TipoDeSueloDTO {
     @JsonIgnore
     private Integer id;
 
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "La descripcion no puede ser Nulo")
-    @Size(min = 2, message = "La descripcion debe tener al menos dos caracteres")
     private String descripcion;
 
-    @OneToMany
-    private List<Cultivo> cultivos;
+    @JsonIgnore
+    private List<CultivoDTO> cultivos;
 
 }

@@ -29,10 +29,10 @@ public class Lote {
     private Campo campo;
 
 
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "El numeroCampo no puede ser Nulo")
-    @Size(min = 2, message = "El numeroCampo debe tener al menos dos caracteres")
-    private String numeroCampo;
+    @Column(nullable = false,unique = true, length = 50)
+    @NotNull(message = "El numeroLote no puede ser Nulo")
+    @Size(min = 2, message = "El numeroLote debe tener al menos dos caracteres")
+    private String numeroLote;
 
     private float superficie;
 
@@ -42,9 +42,6 @@ public class Lote {
     @OneToMany(mappedBy = "lote", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
             CascadeType.REMOVE }, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<ProyectoDeCultivo> proyectoDeCultivos;
-
-
-
 
 
 }

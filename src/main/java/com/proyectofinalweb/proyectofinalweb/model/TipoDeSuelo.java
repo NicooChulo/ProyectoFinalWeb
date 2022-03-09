@@ -24,7 +24,7 @@ public class TipoDeSuelo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false,unique = true, length = 50)
     @NotNull(message = "La descripcion no puede ser Nulo")
     @Size(min = 2, message = "La descripcion debe tener al menos dos caracteres")
     private String descripcion;

@@ -24,7 +24,7 @@ public class Campo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false,unique = true, length = 50)
     @NotNull(message = "El numeroCampo no puede ser Nulo")
     @Size(min = 2, message = "El numeroCampo debe tener al menos dos caracteres")
     private String numeroCampo;
@@ -35,7 +35,4 @@ public class Campo {
     @OneToMany(mappedBy = "campo", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
             CascadeType.REMOVE }, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Lote> lotes;
-
-
-
 }

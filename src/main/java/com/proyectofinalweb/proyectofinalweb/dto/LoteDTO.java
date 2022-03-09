@@ -17,24 +17,16 @@ public class LoteDTO {
     @JsonIgnore
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "id_campo_fk")
-    private Campo campo;
+    private CampoDTO campo;
 
-
-    @Column(nullable = false, length = 50)
-    @NotNull(message = "El numeroCampo no puede ser Nulo")
-    @Size(min = 2, message = "El numeroCampo debe tener al menos dos caracteres")
     private String numeroCampo;
 
     private float superficie;
 
-    @ManyToOne
-    private TipoDeSuelo tipoDeSuelo;
+    private TipoDeSueloDTO tipoDeSuelo;
 
-    @OneToMany(mappedBy = "lote", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
-            CascadeType.REMOVE }, fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<ProyectoDeCultivo> proyectoDeCultivos;
+    @JsonIgnore
+    private List<ProyectoDeCultivoDTO> proyectoDeCultivos;
 
 
 }

@@ -1,13 +1,10 @@
 package com.proyectofinalweb.proyectofinalweb.service.crud;
 
 
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
 
-public interface ICampoService extends ICRUD<EmpleadoDTO>{
+public interface ICampoService extends ICRUD<CampoDTO>{
 
-    EmpleadoDTO buscarEmpleadoPorDNI(String dni);
+    CampoDTO bucarCampoPorNumero(String numeroCampo);
 
-    EmpleadoDTO findById(int empleado_id);
-
-    EmpleadoDTO modificarEmpleado(EmpleadoDTO empleadoDTO);
 }
