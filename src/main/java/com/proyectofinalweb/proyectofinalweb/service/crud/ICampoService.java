@@ -6,7 +6,7 @@ import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
 <<<<<<< Updated upstream
 public interface ICampoService extends ICRUD<CampoDTO>{
 
-    CampoDTO bucarCampoPorNumero(String numeroCampo);
+    CampoDTO buscarCampoPorNumero(String numeroCampo);
 
 =======
 

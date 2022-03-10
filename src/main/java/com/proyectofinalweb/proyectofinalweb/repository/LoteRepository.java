@@ -13,8 +13,5 @@ public interface LoteRepository extends JpaRepository<Lote, Integer> {
 
    @Query("SELECT l FROM Lote l WHERE l.campo = :campo ")
    List<Lote> findLoteByCampo(@Param("campo") String campo);
-
-
 }
-
 

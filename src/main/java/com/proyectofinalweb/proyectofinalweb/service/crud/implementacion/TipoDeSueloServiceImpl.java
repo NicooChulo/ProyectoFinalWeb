@@ -14,10 +14,8 @@ import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.LoteRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.TipoDeSueloRepository;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ILoteService;
-import com.proyectofinalweb.proyectofinalweb.service.crud.ITipoDeSueloService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -42,6 +40,7 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
     }
 
 
+
     @Override
     public TipoDeSueloDTO registrar(TipoDeSueloDTO tipoDeSueloDTO) {
         return null;
@@ -49,6 +48,10 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     @Override
     public TipoDeSueloDTO modificar(TipoDeSueloDTO tipoDeSueloDTO) {
+
+    @Override
+    public LoteDTO modificar(LoteDTO loteDTO) {
+
         return null;
     }
 
@@ -58,6 +61,7 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
     }
 
     @Override
+
     public TipoDeSueloDTO listarId(Integer id) {
         Optional<TipoDeSuelo> opt = tipoDeSueloRepository.findById(id);
 
@@ -69,8 +73,6 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     @Override
     public List<TipoDeSueloDTO> listarTodos() {
-        return null;
-    }
 
     @Override
     public TipoDeSueloDTO buscarTipoDeSueloPorDescripcion(String descripcion) {
@@ -81,4 +83,5 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
         }
         return modelMapper.map(tipoDeSuelo, TipoDeSueloDTO.class);
     }
+
 }

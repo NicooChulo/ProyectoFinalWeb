@@ -38,7 +38,7 @@ public class LoteServiceImpl implements ILoteService {
     @Override
     public LoteDTO registrar(LoteDTO loteDTO) {
         System.out.println("llega al principio");
-        Lote nuevoLote = null;
+            Lote nuevoLote = null;
             nuevoLote = modelMapper.map(loteDTO, Lote.class);
         System.out.println("convierte a modelo");
             loteRepository.save(nuevoLote);
@@ -78,4 +78,4 @@ public class LoteServiceImpl implements ILoteService {
         }
         return estado;
     }
-}
+
