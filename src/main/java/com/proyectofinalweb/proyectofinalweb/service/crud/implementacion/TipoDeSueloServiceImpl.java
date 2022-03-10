@@ -3,20 +3,26 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
 import com.proyectofinalweb.proyectofinalweb.dto.LoteDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
+import com.proyectofinalweb.proyectofinalweb.model.Campo;
+import com.proyectofinalweb.proyectofinalweb.model.Empleado;
 import com.proyectofinalweb.proyectofinalweb.model.Lote;
+import com.proyectofinalweb.proyectofinalweb.model.TipoDeSuelo;
 import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.LoteRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.TipoDeSueloRepository;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ILoteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 
 @Service
-public class TipoDeSueloServiceImpl implements ILoteService {
+public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     private CampoRepository campoRepository;
 
@@ -33,21 +39,19 @@ public class TipoDeSueloServiceImpl implements ILoteService {
         this.modelMapper = modelMapper;
     }
 
+
+
     @Override
-    public LoteDTO registrar(LoteDTO loteDTO) {
-        System.out.println("llega al principio");
-        Lote nuevoLote = null;
-        nuevoLote = modelMapper.map(loteDTO, Lote.class);
-        System.out.println("convierte a modelo");
-        loteRepository.save(nuevoLote);
-        System.out.println("lguarda");
-        loteDTO.setId(nuevoLote.getId());
-        System.out.println("setea id");
-        return modelMapper.map(nuevoLote, LoteDTO.class);
+    public TipoDeSueloDTO registrar(TipoDeSueloDTO tipoDeSueloDTO) {
+        return null;
     }
 
     @Override
+    public TipoDeSueloDTO modificar(TipoDeSueloDTO tipoDeSueloDTO) {
+
+    @Override
     public LoteDTO modificar(LoteDTO loteDTO) {
+
         return null;
     }
 
@@ -57,23 +61,27 @@ public class TipoDeSueloServiceImpl implements ILoteService {
     }
 
     @Override
-    public LoteDTO listarId(Integer id) {
-        return null;
-    }
 
-    @Override
-    public List<LoteDTO> listarTodos() {
-        return null;
-    }
+    public TipoDeSueloDTO listarId(Integer id) {
+        Optional<TipoDeSuelo> opt = tipoDeSueloRepository.findById(id);
 
-    @Override
-    public boolean verificarNumeroLote(LoteDTO loteDTO, CampoDTO campoDTO){
-        boolean estado = false;
-        for (LoteDTO lr: campoDTO.getLotes()){
-            if (lr.getNumeroLote() == loteDTO.getNumeroLote()){
-                estado = true;
-            }
+        if (!opt.isPresent()) {
+            throw new NoSuchElementException("No existe el tipo de suelo con el id: " + id);
         }
-        return estado;
+        return modelMapper.map(opt.get(), TipoDeSueloDTO.class);
     }
+
+    @Override
+    public List<TipoDeSueloDTO> listarTodos() {
+
+    @Override
+    public TipoDeSueloDTO buscarTipoDeSueloPorDescripcion(String descripcion) {
+        TipoDeSuelo tipoDeSuelo = tipoDeSueloRepository.findTipoDeSueloByDescripcion(descripcion);
+        if(tipoDeSuelo == null) {
+            //  throw new  noSuchElementException("noexiste el tipo de suelo: " + dni);
+            return  null;
+        }
+        return modelMapper.map(tipoDeSuelo, TipoDeSueloDTO.class);
+    }
+
 }

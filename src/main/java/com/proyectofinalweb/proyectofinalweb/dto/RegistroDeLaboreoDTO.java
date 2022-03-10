@@ -13,6 +13,11 @@ public class RegistroDeLaboreoDTO {
     @JsonIgnore
     private Integer id;
 
+<<<<<<< Updated upstream
+=======
+
+    @JoinColumn(name = "id_proyecto_de_cultivo_fk")
+>>>>>>> Stashed changes
     private ProyectoDeCultivoDTO proyectoDeCultivo;
 
     private LocalDate inicioRegistro;

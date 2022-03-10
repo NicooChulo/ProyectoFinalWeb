@@ -1,6 +1,7 @@
 package com.proyectofinalweb.proyectofinalweb.dto;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.proyectofinalweb.proyectofinalweb.model.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 import java.util.List;
@@ -15,7 +16,7 @@ public class LoteDTO {
     private CampoDTO campo;
 
     private String numeroLote;
-
+  
     private float superficie;
 
     private TipoDeSueloDTO tipoDeSuelo;

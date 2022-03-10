@@ -5,5 +5,5 @@ import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
 public interface ITipoDeSueloService extends ICRUD<TipoDeSueloDTO>{
 
     TipoDeSueloDTO buscarTipoDeSueloPorDescripcion(String descripcion);
-
 }
+

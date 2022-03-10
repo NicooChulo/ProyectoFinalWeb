@@ -4,6 +4,6 @@ import com.proyectofinalweb.proyectofinalweb.dto.CultivoDTO;
 
 public interface ICultivoService extends ICRUD<CultivoDTO>{
 
-    CultivoDTO findById(int empleado_id);
+    CultivoDTO findById(int cultivo_id);
 
 }
