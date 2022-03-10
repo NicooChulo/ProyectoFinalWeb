@@ -28,8 +28,4 @@ public class EstadoDeCampo {
     @Size(min = 2, message = "La descripcion debe tener al menos dos caracteres")
     private String descripcion;
 
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

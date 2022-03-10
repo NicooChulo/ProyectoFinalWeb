@@ -2,18 +2,12 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 
-import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.LoteDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
-import com.proyectofinalweb.proyectofinalweb.model.Campo;
-import com.proyectofinalweb.proyectofinalweb.model.Empleado;
-import com.proyectofinalweb.proyectofinalweb.model.Lote;
-import com.proyectofinalweb.proyectofinalweb.model.TipoDeSuelo;
 import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
+import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
+import com.proyectofinalweb.proyectofinalweb.model.TipoDeSuelo;
 import com.proyectofinalweb.proyectofinalweb.repository.LoteRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.TipoDeSueloRepository;
-import com.proyectofinalweb.proyectofinalweb.service.crud.ILoteService;
+import com.proyectofinalweb.proyectofinalweb.service.crud.ITipoDeSueloService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -48,20 +42,14 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     @Override
     public TipoDeSueloDTO modificar(TipoDeSueloDTO tipoDeSueloDTO) {
-
-    @Override
-    public LoteDTO modificar(LoteDTO loteDTO) {
-
         return null;
     }
 
     @Override
     public void eliminar(Integer id) {
-
     }
 
     @Override
-
     public TipoDeSueloDTO listarId(Integer id) {
         Optional<TipoDeSuelo> opt = tipoDeSueloRepository.findById(id);
 
@@ -73,6 +61,8 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     @Override
     public List<TipoDeSueloDTO> listarTodos() {
+        return null;
+    }
 
     @Override
     public TipoDeSueloDTO buscarTipoDeSueloPorDescripcion(String descripcion) {

@@ -33,7 +33,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 //Aqui se agrega la ruta del proyecto
-                .apis(RequestHandlerSelectors.basePackage("com.proyectofinalweb.proyectofinalweb"))
+                .apis(RequestHandlerSelectors.basePackage("proyectofinalwebb"))
                 .build()
                 .apiInfo(apiInfo());
     }

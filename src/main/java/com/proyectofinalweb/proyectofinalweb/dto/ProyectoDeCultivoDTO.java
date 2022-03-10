@@ -1,7 +1,7 @@
 package com.proyectofinalweb.proyectofinalweb.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.proyectofinalweb.proyectofinalweb.model.*;
+import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 import java.util.List;
@@ -17,18 +17,10 @@ public class ProyectoDeCultivoDTO {
 
     private String numeroProyecto;
 
-<<<<<<< Updated upstream
     private CultivoDTO cultivo;
 
     private EstadoDelProyectoDTO estadoDeProyecto;
 
-=======
-
-    private CultivoDTO cultivo;
-
-    private EstadoDelProyectoDTO estadoDeProyecto;
-
->>>>>>> Stashed changes
     @JsonIgnore
     private List<RegistroDeLaboreoDTO> registroDeLaboreos;
 

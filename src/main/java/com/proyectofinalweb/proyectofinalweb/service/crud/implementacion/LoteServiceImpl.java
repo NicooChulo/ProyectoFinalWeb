@@ -3,14 +3,12 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.LoteDTO;
-import com.proyectofinalweb.proyectofinalweb.model.Campo;
-import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
+import com.proyectofinalweb.proyectofinalweb.dto.LoteDTO;
+import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import com.proyectofinalweb.proyectofinalweb.repository.LoteRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.TipoDeSueloRepository;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ILoteService;
-import org.hibernate.tool.schema.internal.exec.ScriptTargetOutputToFile;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -38,14 +36,14 @@ public class LoteServiceImpl implements ILoteService {
     @Override
     public LoteDTO registrar(LoteDTO loteDTO) {
         System.out.println("llega al principio");
-            Lote nuevoLote = null;
-            nuevoLote = modelMapper.map(loteDTO, Lote.class);
+        Lote nuevoLote = null;
+        nuevoLote = modelMapper.map(loteDTO, Lote.class);
         System.out.println("convierte a modelo");
-            loteRepository.save(nuevoLote);
+        loteRepository.save(nuevoLote);
         System.out.println("lguarda");
-            loteDTO.setId(nuevoLote.getId());
+        loteDTO.setId(nuevoLote.getId());
         System.out.println("setea id");
-         return modelMapper.map(nuevoLote, LoteDTO.class);
+        return modelMapper.map(nuevoLote, LoteDTO.class);
     }
 
     @Override
@@ -69,13 +67,14 @@ public class LoteServiceImpl implements ILoteService {
     }
 
     @Override
-    public boolean verificarNumeroLote(LoteDTO loteDTO, CampoDTO campoDTO){
+    public boolean verificarNumeroLote(LoteDTO loteDTO, CampoDTO campoDTO) {
         boolean estado = false;
-        for (LoteDTO lr: campoDTO.getLotes()){
-            if (lr.getNumeroLote() == loteDTO.getNumeroLote()){
+        for (LoteDTO lr : campoDTO.getLotes()) {
+            if (lr.getNumeroLote() == loteDTO.getNumeroLote()) {
                 estado = true;
             }
         }
         return estado;
     }
+}
 

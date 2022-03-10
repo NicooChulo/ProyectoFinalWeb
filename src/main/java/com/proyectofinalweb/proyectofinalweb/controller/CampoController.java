@@ -1,7 +1,6 @@
 package com.proyectofinalweb.proyectofinalweb.controller;
 
 import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ICampoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

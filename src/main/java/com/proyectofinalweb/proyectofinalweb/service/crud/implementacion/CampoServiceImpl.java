@@ -2,14 +2,13 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
 import com.proyectofinalweb.proyectofinalweb.model.Campo;
 import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
-import com.proyectofinalweb.proyectofinalweb.repository.EstadoDeCampoRepository;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ICampoService;
+import com.proyectofinalweb.proyectofinalweb.repository.EstadoDeCampoRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Service
@@ -58,7 +57,7 @@ public class CampoServiceImpl implements ICampoService {
     }
     @Override
     public CampoDTO buscarCampoPorNumero(String numeroCampo) {
-            Campo campo = campoRepository.findByNumeroCampo(numeroCampo);
+            Campo campo = campoRepository.findBynumeroCampo(numeroCampo);
             if(campo == null) {
                 //  throw new  noSuchElementException("noexiste id: " + dni);
                 return  null;

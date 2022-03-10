@@ -1,8 +1,5 @@
 package com.proyectofinalweb.proyectofinalweb.service.crud;
 
-import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
 public interface ICRUD<DTO>{

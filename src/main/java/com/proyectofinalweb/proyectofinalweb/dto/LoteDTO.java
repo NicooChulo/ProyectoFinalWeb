@@ -1,7 +1,5 @@
 package com.proyectofinalweb.proyectofinalweb.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.proyectofinalweb.proyectofinalweb.model.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 import java.util.List;
