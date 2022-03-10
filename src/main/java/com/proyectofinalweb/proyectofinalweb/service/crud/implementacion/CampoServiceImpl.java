@@ -36,6 +36,7 @@ public class CampoServiceImpl implements ICampoService {
         campoDTO.setId(nuevoCampo.getId());
         return campoDTO;
     }
+
     @Override
     public CampoDTO modificar(CampoDTO campoDTO) {
         return null;
@@ -57,7 +58,7 @@ public class CampoServiceImpl implements ICampoService {
     }
     @Override
     public CampoDTO buscarCampoPorNumero(String numeroCampo) {
-            Campo campo = campoRepository.findBynumeroCampo(numeroCampo);
+            Campo campo = campoRepository.findByNumeroCampo(numeroCampo);
             if(campo == null) {
                 //  throw new  noSuchElementException("noexiste id: " + dni);
                 return  null;

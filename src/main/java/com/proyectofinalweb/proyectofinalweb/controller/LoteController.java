@@ -56,6 +56,7 @@ public class LoteController {
     }*/
 
 
+
     @RequestMapping(method = RequestMethod.POST, consumes="application/json")
     @ResponseBody
     public ResponseEntity<LoteDTO> create(@RequestBody LoteRequestDTO loteRequestDTO) {
@@ -75,6 +76,7 @@ public class LoteController {
 
                     LoteDTO nuevoLote = new  LoteDTO();
                     nuevoLote.setNumeroLote(loteRequestDTO.getNumeroLote());
+                    logger.info("setea el numero de lote {}", loteRequestDTO.getNumeroLote());
                     nuevoLote.setSuperficie(loteRequestDTO.getSuperficie());
                     nuevoLote.setCampo(campoService.buscarCampoPorNumero(loteRequestDTO.getNumeroCampo()));
                     nuevoLote.setTipoDeSuelo(tipoDeSueloService.buscarTipoDeSueloPorDescripcion(loteRequestDTO.getTipoDeSuelo()));

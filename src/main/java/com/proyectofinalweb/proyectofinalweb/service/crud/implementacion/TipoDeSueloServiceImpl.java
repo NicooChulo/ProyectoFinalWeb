@@ -2,14 +2,22 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 
-import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
+import com.proyectofinalweb.proyectofinalweb.dto.CampoDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.EmpleadoDTO;
+import com.proyectofinalweb.proyectofinalweb.dto.LoteDTO;
 import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
+import com.proyectofinalweb.proyectofinalweb.model.Campo;
+import com.proyectofinalweb.proyectofinalweb.model.Empleado;
+import com.proyectofinalweb.proyectofinalweb.model.Lote;
 import com.proyectofinalweb.proyectofinalweb.model.TipoDeSuelo;
+import com.proyectofinalweb.proyectofinalweb.repository.CampoRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.LoteRepository;
 import com.proyectofinalweb.proyectofinalweb.repository.TipoDeSueloRepository;
+import com.proyectofinalweb.proyectofinalweb.service.crud.ILoteService;
 import com.proyectofinalweb.proyectofinalweb.service.crud.ITipoDeSueloService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -34,7 +42,6 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
     }
 
 
-
     @Override
     public TipoDeSueloDTO registrar(TipoDeSueloDTO tipoDeSueloDTO) {
         return null;
@@ -47,6 +54,7 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
 
     @Override
     public void eliminar(Integer id) {
+
     }
 
     @Override
@@ -73,5 +81,4 @@ public class TipoDeSueloServiceImpl implements ITipoDeSueloService {
         }
         return modelMapper.map(tipoDeSuelo, TipoDeSueloDTO.class);
     }
-
 }

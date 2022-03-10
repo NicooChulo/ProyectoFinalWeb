@@ -9,4 +9,3 @@ public interface ILoteService extends ICRUD<LoteDTO>{
     public boolean verificarNumeroLote(LoteDTO loteDTO, CampoDTO campoDTO);
 
 }
-

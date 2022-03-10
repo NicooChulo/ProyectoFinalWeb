@@ -8,9 +8,7 @@ import org.springframework.data.repository.query.Param;
 public interface CampoRepository extends JpaRepository<Campo, Integer> {
 
     Campo findById(int id);
-
-    @Query("SELECT c FROM Campo c WHERE c.numeroCampo = :numeroCampo")
-    Campo findBynumeroCampo(@Param("numeroCampo") String numeroCampo);
-
+    @Query("SELECT c FROM Campo c WHERE c.numeroCampo = :numeroCampo ")
+    Campo findByNumeroCampo(@Param("numeroCampo") String numeroCampo);
 }
 

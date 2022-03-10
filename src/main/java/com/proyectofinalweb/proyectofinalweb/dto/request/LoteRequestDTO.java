@@ -12,8 +12,7 @@ public class LoteRequestDTO {
     private String numeroLote;
 
     private Float superficie;
-
-
+    
     //Tipo de suelo es la variable descripción
     private String tipoDeSuelo;
 }
