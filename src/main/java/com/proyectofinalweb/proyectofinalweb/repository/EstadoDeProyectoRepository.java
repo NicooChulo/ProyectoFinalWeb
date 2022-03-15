@@ -11,7 +11,7 @@ public interface EstadoDeProyectoRepository extends JpaRepository<EstadoDeProyec
 
     EstadoDeProyecto findById(int id);
 
-    @Query("SELECT ep FROM estadoProyectos ts WHERE ep.descripcion = :descripcion ")
+    @Query("SELECT ep FROM EstadoDeProyectos ep WHERE ep.descripcion = :descripcion ")
     EstadoDeProyecto findEstadoDeProyecto(@Param("descripcion") String descripcion);
 
 }

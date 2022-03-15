@@ -49,10 +49,10 @@ INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALU
 INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('2','7');
 INSERT INTO cultivos_orden_de_laboreo (`cultivo_id`, `orden_de_laboreo_id`) VALUES ('2','8');
 
-INSERT INTO estado_proyectos (`id`, `descripcion`) VALUES ('1', 'Preparacion');
-INSERT INTO estado_proyectos (`id`, `descripcion`) VALUES ('2', 'Post Siembra');
-INSERT INTO estado_proyectos (`id`, `descripcion`) VALUES ('3', 'Finalizado');
-INSERT INTO estado_proyectos (`id`, `descripcion`) VALUES ('4', 'Cancelado');
+INSERT INTO estado_de_proyectos (`id`, `descripcion`) VALUES ('1', 'Preparacion');
+INSERT INTO estado_de_proyectos (`id`, `descripcion`) VALUES ('2', 'Post Siembra');
+INSERT INTO estado_de_proyectos (`id`, `descripcion`) VALUES ('3', 'Finalizado');
+INSERT INTO estado_de_proyectos (`id`, `descripcion`) VALUES ('4', 'Cancelado');
 
 
 

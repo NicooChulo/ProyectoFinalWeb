@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @Entity
-@Table(name = "estado_proyectos")
+@Table(name = "estado_de_proyectos")
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

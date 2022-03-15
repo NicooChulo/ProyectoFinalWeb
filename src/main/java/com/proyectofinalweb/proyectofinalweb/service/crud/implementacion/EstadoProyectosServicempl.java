@@ -3,12 +3,9 @@ package com.proyectofinalweb.proyectofinalweb.service.crud.implementacion;
 
 
 import com.proyectofinalweb.proyectofinalweb.dto.EstadoDelProyectoDTO;
-import com.proyectofinalweb.proyectofinalweb.dto.TipoDeSueloDTO;
 import com.proyectofinalweb.proyectofinalweb.model.EstadoDeProyecto;
-import com.proyectofinalweb.proyectofinalweb.model.TipoDeSuelo;
 import com.proyectofinalweb.proyectofinalweb.repository.*;
 import com.proyectofinalweb.proyectofinalweb.service.crud.IEstadoProyectosService;
-import com.proyectofinalweb.proyectofinalweb.service.crud.ITipoDeSueloService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -35,11 +32,13 @@ public class EstadoProyectosServicempl implements IEstadoProyectosService {
 
     @Override
     public EstadoDelProyectoDTO registrar(EstadoDelProyectoDTO estadoDelProyectoDTO) {
+
         return null;
     }
 
     @Override
     public EstadoDelProyectoDTO modificar(EstadoDelProyectoDTO estadoDelProyectoDTO) {
+
         return null;
     }
 
@@ -50,11 +49,17 @@ public class EstadoProyectosServicempl implements IEstadoProyectosService {
 
     @Override
     public EstadoDelProyectoDTO listarId(Integer id) {
-        return null;
+        Optional<EstadoDeProyecto> opt = estadoDeProyectoRepository.findById(id);
+
+        if (!opt.isPresent()) {
+            throw new NoSuchElementException("No existe el tipo de suelo con el id: " + id);
+        }
+        return modelMapper.map(opt.get(), EstadoDelProyectoDTO.class);
     }
 
     @Override
     public List<EstadoDelProyectoDTO> listarTodos() {
+
         return null;
     }
 

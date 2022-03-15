@@ -14,6 +14,6 @@ public interface ProyectoDeCultivoRepository extends JpaRepository<ProyectoDeCul
 
     ProyectoDeCultivo findById(int id);
 
-    @Query("SELECT l FROM Lote l WHERE l.campo = :campo ")
-    List<Lote> findLoteByCampo(@Param("campo") String campo);
+    @Query("SELECT pc FROM ProyectosCultivos pc WHERE pc.id_lote_fk = :lote ")
+    List<Lote> findProyectoDetoCultivoByLote(@Param("lote") String lote);
 }

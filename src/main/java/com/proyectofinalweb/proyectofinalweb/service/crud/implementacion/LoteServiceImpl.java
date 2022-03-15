@@ -75,4 +75,7 @@ public class LoteServiceImpl implements ILoteService {
         }
         return estado;
     }
+
+
+
 }
