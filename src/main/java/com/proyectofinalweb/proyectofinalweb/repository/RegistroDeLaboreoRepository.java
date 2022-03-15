@@ -5,7 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RegistroDeLaboreoRepository extends JpaRepository<RegistroDeLaboreo, Integer> {
 
-
-    RegistroDeLaboreo findById(int id);
-
+        RegistroDeLaboreo findById(int id);
 }

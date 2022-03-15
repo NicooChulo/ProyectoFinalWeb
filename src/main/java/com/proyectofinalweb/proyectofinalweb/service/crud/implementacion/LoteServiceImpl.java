@@ -35,13 +35,13 @@ public class LoteServiceImpl implements ILoteService {
 
     @Override
     public LoteDTO registrar(LoteDTO loteDTO) {
-            System.out.println("llega al principio");
+
         Lote nuevoLote = modelMapper.map(loteDTO, Lote.class);
-            System.out.println("convierte a modelo");
+
         loteRepository.save(nuevoLote);
-            System.out.println("guarda");
+
         loteDTO.setId(nuevoLote.getId());
-            System.out.println("setea id");
+
         return modelMapper.map(nuevoLote, LoteDTO.class);
     }
 

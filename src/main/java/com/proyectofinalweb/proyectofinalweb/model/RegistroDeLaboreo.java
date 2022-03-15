@@ -5,7 +5,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Getter
 @Setter
@@ -34,8 +33,8 @@ public class RegistroDeLaboreo {
     @Column(columnDefinition = "DATE")
     private LocalDate finalizacionRegistro;
 
-    @OneToMany
-    private List<Laboreo> laboreos;
+    @ManyToOne
+    private Laboreo laboreos;
 
 
 

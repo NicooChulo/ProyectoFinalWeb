@@ -6,7 +6,6 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.JoinColumn;
 import java.time.LocalDate;
-import java.util.List;
 
 @Validated
 @Data
@@ -22,8 +21,7 @@ public class RegistroDeLaboreoDTO {
 
     private LocalDate finalizacionRegistro;
 
-    @JsonIgnore
-    private List<LaboreoDTO> laboreos;
+    private LaboreoDTO laboreos;
 
 
 }
